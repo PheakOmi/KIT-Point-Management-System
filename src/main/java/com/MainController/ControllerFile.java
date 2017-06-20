@@ -20,6 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 
+
 import com.DaoClasses.userDaoImpl;
 import com.EntityClasses.User;
 import com.ModelClasses.retrieve;
@@ -35,8 +36,12 @@ public class ControllerFile {
 	@Autowired
 	usersService usersService1;	
 	
-	
-	
+//	=================project============================
+	@RequestMapping("/project")
+	public ModelAndView helloProject() {
+		String message = "Hello World";
+		return new ModelAndView("project", "message", message);
+	}
 
 //1. First Method using model classes	
 	
