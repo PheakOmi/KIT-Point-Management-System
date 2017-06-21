@@ -1,19 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-  <!-- Bootstrap Core CSS -->
-    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<title><tiles:insertAttribute name="title" /></title>
+
+  <spring:url value="/resources/Bootstrap/css/bootstrap.min.css" var="bootatrapCore"/>
+  <spring:url value="/resources/Bootstrap/css/sb-admin.css" var="CustomCSS"/>
+  <spring:url value="/resources/Bootstrap/css/plugins/morris.css" var="morrisCSS"/>
+  <spring:url value="/resources/Bootstrap/font-awesome/css/font-awesome.min.css" var="customfontCSS"/>
+    <!-- Bootstrap Core CSS -->
+    <link href="${bootatrapCore}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="Bootstrap/css/sb-admin.css" rel="stylesheet">
+    <link href="${CustomCSS}" rel="stylesheet">
     <!-- Morris Charts CSS -->
-    <link href="Bootstrap/css/plugins/morris.css" rel="stylesheet">
+    <link href="${morrisCSS }" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="Bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${customfontCSS }" rel="stylesheet" type="text/css">
 <!--  jQuery -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
@@ -47,18 +52,5 @@
     <script src="Bootstrap/js/plugins/morris/raphael.min.js"></script>
     <script src="Bootstrap/js/plugins/morris/morris.min.js"></script>
     <script src="Bootstrap/js/plugins/morris/morris-data.js"></script>
-    <script>
-    $(document).ready(function(){
-      var date_input=$('input[name="date"]'); //our date input has the name "date"
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'mm/dd/yyyy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-    })
-</script>
 </body>
 </html>

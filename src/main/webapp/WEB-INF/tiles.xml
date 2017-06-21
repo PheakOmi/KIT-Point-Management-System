@@ -5,18 +5,38 @@
 <tiles-definitions>
 	<definition name="base.definition"
 		template="/WEB-INF/views/template/layout.jsp">
-		<put-attribute name="title" value="" />
 		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
 		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
 	</definition>
 
-	<definition name="project" extends="base.definition">
-		<put-attribute name="title" value="Hello Spring MVC" />
-		<put-attribute name="body" value="/WEB-INF/views/view/home.jsp" />
+	<definition name="viewProject" extends="base.definition">
+		<put-attribute name="title" value="project" />
+		<put-attribute name="body" value="/WEB-INF/views/view/viewProject.jsp" />
 	</definition>
 	<definition name="projectDetail" extends="base.definition">
-		<put-attribute name="title" value="Hello Spring MVC" />
+		<put-attribute name="title" value="Project detail" />
 		<put-attribute name="body" value="/WEB-INF/views/view/projectDetail.jsp" />
+	</definition>
+	<definition name="viewSetting" extends="base.definition">
+		<put-attribute name="title" value="setting" />
+		<put-attribute name="body" value="/WEB-INF/views/view/setting.jsp" />
+	</definition>
+		<definition name="viewBatch" extends="base.definition">
+		<put-attribute name="title" value="setting" />
+		<put-attribute name="body" value="/WEB-INF/views/view/batch.jsp" />
+	</definition>
+		<definition name="viewProjectCaterory" extends="base.definition">
+		<put-attribute name="title" value="setting" />
+		<put-attribute name="body" value="/WEB-INF/views/view/projectCategory.jsp" />
+	</definition>
+		<definition name="viewValuePerHour" extends="base.definition">
+		<put-attribute name="title" value="setting" />
+		<put-attribute name="body" value="/WEB-INF/views/view/valuePerHour.jsp" />
+	</definition>
+	
+		<definition name="viewKitPoint" extends="base.definition">
+		<put-attribute name="title" value="setting" />
+		<put-attribute name="body" value="/WEB-INF/views/view/kitpoint.jsp" />
 	</definition>
 </tiles-definitions>

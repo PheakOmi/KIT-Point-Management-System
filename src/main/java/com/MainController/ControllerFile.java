@@ -38,11 +38,50 @@ public class ControllerFile {
 	
 //	=================project============================
 	@RequestMapping("/project")
-	public ModelAndView helloProject() {
+	public ModelAndView viewProject() {
 		String message = "Hello World";
-		return new ModelAndView("project", "message", message);
+		return new ModelAndView("viewProject", "message", message);
+	}
+	
+//	=================project Detail============================
+	@RequestMapping("/projectDetail")
+	public ModelAndView viewProjectdetail() {
+		String message = "Hello World";
+		return new ModelAndView("projectDetail", "message", message);
+	}
+//	=================setting============================
+	@RequestMapping("/setting")
+	public ModelAndView viewSetting() {
+		String message = "Hello World";
+		return new ModelAndView("viewSetting", "message", message);
+	}
+//	=================view batch============================
+	@RequestMapping("/batch")
+	public ModelAndView viewBatch() {
+		String message = "Hello World";
+		return new ModelAndView("viewBatch", "message", message);
+	}
+//	=================kit point============================
+	@RequestMapping("/kitpoint")
+	public ModelAndView viewkitpoint() {
+		String message = "Hello World";
+		return new ModelAndView("viewKitPoint", "message", message);
+	}
+//	=================view project category============================
+	@RequestMapping("/projectCategory")
+	public ModelAndView viewProjectCategory() {
+		String message = "Hello World";
+		return new ModelAndView("viewProjectCaterory", "message", message);
 	}
 
+//	=================view Value Per Hour============================
+	@RequestMapping("/valuePerHour")
+	public ModelAndView viewValuePerHour() {
+		String message = "Hello World";
+		return new ModelAndView("viewValuePerHour", "message", message);
+	}
+
+	
 //1. First Method using model classes	
 	
 //=================Submit Users==============================
